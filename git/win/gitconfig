@@ -1,19 +1,19 @@
 [user]
 	name = patrickcousins
-
 [color]
 	ui = true
 [core]
-	autocrlf = true
+	autocrlf = input
 	editor = 'C:/shell_scripts/npp.sh'
 	filemode = false
-[merge]
-	tool = p4merge
-[mergetool "p4merge"]
-	cmd = p4merge.exe \\\"$BASE\\\" \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\"
 [alias]
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
 	unstage = reset HEAD --
+[diff]
+   tool = p4mergeDiff
+[difftool "p4mergeDiff"]
+	cmd = p4merge-diff.sh \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+	prompt = false
