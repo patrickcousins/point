@@ -5,7 +5,7 @@ setopt promptsubst
 
 autoload -U add-zsh-hook
 
-PROMPT_SUCCESS_COLOR=$fg_bold[green]
+PROMPT_SUCCESS_COLOR=$fg_bold[cyan]
 PROMPT_FAILURE_COLOR=$FG[124]
 PROMPT_VCS_INFO_COLOR=$FG[242]
 PROMPT_PROMPT=$FG[000]
