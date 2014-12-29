@@ -1,5 +1,6 @@
 [user]
 	name = patrickcousins
+	email = pj@pj-co.com
 [color]
 	ui = true
 [core]
@@ -8,10 +9,12 @@
 	filemode = false
 [alias]
 	co = checkout
+	cp = cherry-pick
 	br = branch
 	ci = commit
 	st = status
 	unstage = reset HEAD --
+	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 [diff]
    tool = p4mergeDiff
 [difftool "p4mergeDiff"]
