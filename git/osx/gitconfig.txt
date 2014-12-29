@@ -1,0 +1,22 @@
+[user]
+	name = patrickcousins
+	email = patrick@seeclickfix.com
+[alias]
+	last = log -1 HEAD
+	co = checkout
+	ci = commit
+	cm = commit
+	br = branch
+	bi = bisect
+	unstage = reset HEAD --
+	ap = add -p
+	pr = !hub pull-request
+	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit
+        lgg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --graph
+	st = status
+	cp = cherry-pick
+	ap = add -p	
+[core]
+	editor = subl -n -w
+[push]
+	default = simple
