@@ -5,7 +5,11 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="remuse"
+DEFAULT_USER="cousinsp"
+
+#for autojump, recommended when brew installed it
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -40,26 +44,37 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow)
+plugins=(git git-flow autojump wd)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:~/bin
-export PATH=$PATH:/Users/patrick/android-sdks/platform-tools
-export PATH=$PATH:/Users/patrick/android-sdks/tools
+export ANDROID_HOME=/Users/cousinsp/sdks/android
+#export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/bin
+export PATH=/usr/local/bin:/usr/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH:
 
-export PATH=./node_modules/.bin:$PATH
+#export PATH=./node_modules/.bin:$PATH
 export EDITOR='subl -w'
 
+
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home`
 
 export HOMEBREW_GITHUB_API_TOKEN=f82cc9084f72ad67e4cad9555c5770fdc30a24b2
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+alias report="open file:///Users/cousinsp/git/viacom/spike-network/app/build/test-report/debug/index.html"
 alias pushtags="git push --tags"
 alias grhh="git reset head --hard"
 alias gs="git status"
-alias unin="adb uninstall com.seeclickfix.ma.android"
+alias gr="./gradlew"
+alias grct="./gradlew clean test"
+alias grt="./gradlew test"
+alias unin="adb uninstall com.vmn.android.spike"
+#alias unin="adb uninstall com.seeclickfix.ma.android"
 alias bkapp="adb backup -f $HOME/scf_bkup.ab -noapk com.seeclickfix.ma.android"
 alias unpkapp="dd if=$HOME/scf_bkup.ab bs=1 skip=24 | python -c 'import zlib,sys;sys.stdout.write(zlib.decompress(sys.stdin.read()))' | tar -xvf -"

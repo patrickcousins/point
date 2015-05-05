@@ -1,6 +1,6 @@
 [user]
 	name = patrickcousins
-	email = patrick@seeclickfix.com
+	email = pj@pj-co.com
 [alias]
 	last = log -1 HEAD
 	co = checkout
