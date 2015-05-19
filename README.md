@@ -11,4 +11,4 @@ Default config files, utils, and .otherstuff
 
 Find and replace on OSX 
 
-    $ find . -type f -name '*.txt' -exec sed -i '' s/this/that/ {} +
+    $find . -type f -name '*.txt' -exec sed -i '' s/this/that/ {} +
