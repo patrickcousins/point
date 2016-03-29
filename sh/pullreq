@@ -1,0 +1,8 @@
+#!/bin/bash
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+repository="android-consumer-app"
+company="youvisit"
+branchUrl="https://bitbucket.org/${company}/${repository}/pull-requests/new?source=${CURRENT_BRANCH}&t=1"
+echo "Opening: ${branchUrl}"
+open $branchUrl
+git checkout develop
