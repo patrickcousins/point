@@ -16,3 +16,7 @@ Find and replace on OSX
 Delete merged branches
 
     git branch --merged | grep -v '\*\|master\|develop' | xargs -n 1 git branch -d
+
+Find java path from symlink
+
+    $(readlink -f $(which java))
