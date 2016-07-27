@@ -20,3 +20,7 @@ Delete merged branches
 Find java path from symlink
 
     $(readlink -f $(which java))
+
+Send an intent simulating a 'deeplink' from google play
+
+    $adb am broadcast -a com.android.vending.INSTALL_REFERRER -n com.company.packagename/com.company.packagename.BroadcastReceiverClass --es "referrer" "test_referrer=test"
