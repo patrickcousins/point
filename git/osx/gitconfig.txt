@@ -1,6 +1,6 @@
 [user]
 	name = patrickcousins
-	email = pj@pj-co.com
+	email = pcousins@etsy.com
 [alias]
 	last = log -1 HEAD
 	co = checkout
