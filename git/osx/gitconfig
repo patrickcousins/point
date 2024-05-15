@@ -1,8 +1,6 @@
-[color]
-	ui = auto
 [user]
 	name = patrickcousins
-	email = patrick@thehackerati.com
+	email = ...
 [alias]
 	last = log -1 HEAD
 	co = checkout
@@ -19,12 +17,10 @@
 	cp = cherry-pick
 	ap = add -p	
 [core]
-	editor = subl -n -w
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 [push]
 	default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[color]
+	ui = auto
+[fetch]
+	prune = true

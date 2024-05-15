@@ -1,6 +1,6 @@
 [user]
 	name = patrickcousins
-	email = pcousins@etsy.com
+	email = ...
 [alias]
 	last = log -1 HEAD
 	co = checkout
@@ -17,6 +17,10 @@
 	cp = cherry-pick
 	ap = add -p	
 [core]
-	editor = subl -n -w
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 [push]
 	default = simple
+[color]
+	ui = auto
+[fetch]
+	prune = true
